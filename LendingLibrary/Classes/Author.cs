@@ -4,11 +4,13 @@ using System.Text;
 
 namespace LendingLibrary.Classes
 {
-    class Author
+    public class Author
     {
         public string Name { get; set; }
 
-        public string Home { get; set; }
-
+        public Author(string name)
+        {
+            Name = name;
+        }
     }
 }
