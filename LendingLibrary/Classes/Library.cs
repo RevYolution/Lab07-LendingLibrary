@@ -39,7 +39,23 @@ namespace LendingLibrary.Classes
         /// <param name="book">The book to be removed</param>
         public void RemoveBook(T book)
         {
+            T[] seekBook = _books;
+            _books = new T[10];
+            int seekCounter = _bookCounter;
+            _bookCounter = 0;
 
+            for (int i = 0; i < seekCounter; i++)
+            {
+                if (!seekBook[i].Equals(book))
+                {
+                    AddBook(seekBook[i]);
+                }
+            }
+
+            if (_bookCounter == seekCounter)
+            {
+                throw new Exception("That book was not found please try again");
+            }
         }
 
 
