@@ -13,7 +13,8 @@ namespace LendingLibrary
 
             int bookCounter = 0;
 
-            Console.WriteLine("Available Books in the Library");
+            Console.WriteLine("Available Books in the Library:");
+            Console.WriteLine();
             foreach (Book book in library)
             {
                 Console.WriteLine($"{book.Title} by {book.Author.Name}");
@@ -34,10 +35,10 @@ namespace LendingLibrary
             Author author1 = new Author("Jon Rice");
 
             Book book1 = new Book("The best book in the world", Genre.Romance, author1);
-            Book book2 = new Book("The best book in the world", Genre.Comedy, author1);
-            Book book3 = new Book("The best book in the world", Genre.Fantasy, author1);
-            Book book4 = new Book("The best book in the world", Genre.NonFiction, author1);
-            Book book5 = new Book("The best book in the world", Genre.History, author1);
+            Book book2 = new Book("The Coffee Manifesto", Genre.Comedy, author1);
+            Book book3 = new Book("Where to go whit no direction", Genre.Fantasy, author1);
+            Book book4 = new Book("How to make an awkward situation worse", Genre.NonFiction, author1);
+            Book book5 = new Book("Yes!", Genre.History, author1);
 
 
             Library<Book> lendingLibrary = new Library<Book>();
